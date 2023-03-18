@@ -1,17 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./assets/pngwing.com.png">
-    <link rel="stylesheet" href="./output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/pngwing.com.png" />
+    <link rel="stylesheet" href="./output.css" />
+    <script src="./app.js" defer></script>
     <title>Joke Api</title>
-</head>
-<body class="flex justify-center items-center h-screen bg-gray-900">
-        <p class="text-gray-50 text-center font-medium"></p>
-        <button class="generateJokeBtn cursor-pointer font-bold text-gray-50 py-4 px-8 bg-gray-900 rounded-xl">Generate new joke</button>
+  </head>
+  <body class="container flex p-10 gap-5 bg-gray-500">
+    <div class="sidebar h-full bg-gray-800 p-4 text-gray-50 rounded-lg">
+      <div class="joke-filter mb-5">
+        <h3 class="font-bold text-lg mb-2">Select joke genre:</h3>
+        <ul class="px-2">
+          <li>
+            <input class="genre" type="checkbox" name="Programing" id="Programming" data-place="1"/>
+            <label for="Programming">Programming</label>
+          </li>
+
+          <li>
+            <input class="genre" type="checkbox" name="Music" id="Miscellaneous" data-place="2"/>
+            <label for="Miscellaneous">Music</label>
+          </li>
+
+          <li>
+            <input class="genre" type="checkbox" name="Dark" id="Dark" data-place="3"/>
+            <label for="Dark">Dark</label>
+          </li>
+
+          <li>
+            <input class="genre" type="checkbox" name="Pun" id="Pun" data-place="4"/>
+            <label for="Pun">Pun</label>
+          </li>
+
+          <li>
+            <input class="genre" type="checkbox" name="Spooky" id="Spooky" data-place="5"/>
+            <label for="Spooky">Spooky</label>
+          </li>
+
+          <li>
+            <input class="genre" type="checkbox" name="Christmas" id="Christmas" data-place="6"/>
+            <label for="Christmas">Christmas</label>
+          </li>
+        </ul>
+      </div>
+      <div class="black-list mb-5">
+        <h3 class="font-bold text-lg mb-2">Black list joke genre</h3>
+        <ul class="px-2">
+          <li>
+            <input class="flag" type="checkbox" name="nsfw" id="nsfw" data-place="1" />
+            <label for="nsfw">NSFW</label>
+          </li>
+          <li>
+            <input class="flag" type="checkbox" name="religious" id="religious" data-place="2" />
+            <label for="religious">Religious</label>
+          </li>
+          <li>
+            <input class="flag" type="checkbox" name="political" id="political" data-place="3" />
+            <label for="political">Poliical</label>
+          </li>
+          <li>
+            <input class="flag" type="checkbox" name="racist" id="racist" data-place="4" />
+            <label for="racist">Racist</label>
+          </li>
+          <li>
+            <input class="flag" type="checkbox" name="sexist" id="sexist" data-place="5" />
+            <label for="sexist">Sexist</label>
+          </li>
+          <li>
+            <input class="flag" type="checkbox" name="explicit" id="explicit" data-place="6" />
+            <label for="explicit">Explicit</label>
+          </li>
+        </ul>
+      </div>
+      <div class="joke-amount">
+        <h3 class="font-bold text-lg mb-2">How many jokes would you like?</h3>
+        <input
+          class="w-10 p-1 bg-gray-500"
+          type="text"
+          name="amout"
+          id="amount"
+          value="1"
+        />
+      </div>
+      <div class="py-7 flex justify-center items-center">
+        <button
+          class="generateJokeBtn cursor-pointer font-bold text-gray-50 mx-auto py-4 px-8 bg-gray-900 rounded-xl"
+        >
+          Generate new jokes
+        </button>
+      </div>
     </div>
-    <script src="./app.js"></script>
-</body>
+    <main>
+      <div class="grid grid-cols-3 gap-4">
+        
+      </div>
+    </main>
+  </body>
 </html>
